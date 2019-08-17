@@ -67,7 +67,7 @@ public class Variables implements IVariables {
 			new PotionEffectImpl("potion.moveSpeed", 20 * 50, "0:50", 1, 0, true, true, 0x7cafc6));
 
 	public Variables() {
-		eu.the5zig.mod.util.Keyboard.initLegacy(new eu.the5zig.mod.util.Keyboard.KeyboardHandler() {
+		/*eu.the5zig.mod.util.Keyboard.initLegacy(new eu.the5zig.mod.util.Keyboard.KeyboardHandler() {
 			@Override
 			public boolean isKeyDown(int key) {
 				return org.lwjgl.input.Keyboard.isKeyDown(key);
@@ -77,7 +77,7 @@ public class Variables implements IVariables {
 			public void enableRepeatEvents(boolean repeat) {
 				eu.the5zig.mod.util.Keyboard.enableRepeatEvents(repeat);
 			}
-		});
+		});*/
 		Mouse.init(new Mouse.MouseHandler() {
 			@Override
 			public boolean isButtonDown(int button) {

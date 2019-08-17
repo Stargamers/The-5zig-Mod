@@ -59,7 +59,7 @@
     <orderEntry type="module" module-name="Teamspeak API" />
     <orderEntry type="module" module-name="Docs" />
     <orderEntry type="library" name="lib 1.12.2" level="project" />
-    <orderEntry type="module" module-name="1.12.2" />
+    <orderEntry type="module" module-name="1.13.2" />
     <orderEntry type="module-library">
       <library>
         <CLASSES />
