@@ -1,6 +1,4 @@
 # The 5zig Mod
-After more than six years it's time to say goodbye! I've had a lot fun integrating my own features into Minecraft and creating a mod that reached so many more people than I have ever anticipated - but now I'm going to move on. Thank you for an amazing time.
-
 Feel free to modify, update and add new features (I heard you like free capes :P) to the mod.
 
 ### Download the latest version [here](https://github.com/5zig/The-5zig-Mod/releases/tag/3.12.5).
