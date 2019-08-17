@@ -1,6 +1,8 @@
 # The 5zig Mod
 Feel free to modify, update and add new features (I heard you like free capes :P) to the mod.
 
+I recommend you to yous the MCPMappingViewer and Bytecodeviewer for faster finding of changed class names
+
 ### Download the latest version [here](https://github.com/5zig/The-5zig-Mod/releases/tag/3.12.5).
 
 #### Here are a few quick start guides for developing the mod:

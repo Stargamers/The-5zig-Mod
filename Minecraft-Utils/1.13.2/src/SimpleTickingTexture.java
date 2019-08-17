@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SimpleTickingTexture extends dcy implements ddh {
+public class SimpleTickingTexture extends ddi implements ddr {
 
 	private final ResourceLocation resourceLocation;
 
@@ -26,7 +26,7 @@ public class SimpleTickingTexture extends dcy implements ddh {
 				for (int i = 0; i < bufferedImages1.size(); i++) {
 					BufferedImage bufferedImage = bufferedImages1.get(i);
 					ResourceLocation resourceLocation = new ResourceLocation(this.resourceLocation.getResourceDomain(), this.resourceLocation.getResourcePath() + "_" + i);
-					dde texture = ((Variables) MinecraftFactory.getVars()).getTextureManager().b(resourceLocation);
+					ddo texture = ((Variables) MinecraftFactory.getVars()).getTextureManager().b(resourceLocation);
 					SimpleTexture simpleTexture;
 					if (texture instanceof SimpleTexture) {
 						simpleTexture = (SimpleTexture) texture;
@@ -60,7 +60,7 @@ public class SimpleTickingTexture extends dcy implements ddh {
 	}
 
 	@Override
-	public void a(ve resourceManager) throws IOException {
+	public void a(vf resourceManager) throws IOException {
 	}
 
 	@Override

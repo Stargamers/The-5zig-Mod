@@ -5,7 +5,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class SimpleTexture extends dcy {
+public class SimpleTexture extends ddi {
 
 	private boolean textureUploaded;
 	private BufferedImage bufferedImage;
@@ -21,8 +21,8 @@ public class SimpleTexture extends dcy {
 					ByteArrayOutputStream os = new ByteArrayOutputStream();
 					ImageIO.write(bufferedImage, "png", os);
 					InputStream in = new ByteArrayInputStream(os.toByteArray());
-					dcw var1 = dcw.a(in);
-					ddf.a(super.c(), var1.a(), var1.b());
+					ddg var1 = ddg.a(in);
+					ddp.a(super.c(), var1.a(), var1.b());
 					var1.a(0, 0, 0, false);
 					this.textureUploaded = true;
 				} catch (IOException e) {
@@ -48,6 +48,6 @@ public class SimpleTexture extends dcy {
 	}
 
 	@Override
-	public void a(ve resourceManager) throws IOException {
+	public void a(vf resourceManager) throws IOException {
 	}
 }

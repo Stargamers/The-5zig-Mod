@@ -1,4 +1,4 @@
-public class TextureAtlasSprite extends ddc {
+public class TextureAtlasSprite extends ddm {
 
 	public static final TextureAtlasSprite MISSING_NO = new TextureAtlasSprite("missingno");
 

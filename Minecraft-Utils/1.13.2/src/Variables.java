@@ -263,7 +263,7 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 
 	@Override
 	public IWrappedTextfield createWrappedTextfield(Object handle) {
-		return new WrappedTextfield((cgn) handle);
+		return new WrappedTextfield((cgy) handle);
 	}
 
 	@Override
@@ -328,7 +328,7 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 
 	@Override
 	public boolean isChatOpened() {
-		return getMinecraftScreen() instanceof civ;
+		return getMinecraftScreen() instanceof cjg;
 	}
 
 	@Override
@@ -342,18 +342,18 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 	@Override
 	public void typeInChatGUI(String text) {
 		if (!isChatOpened()) {
-			displayScreen(new civ());
+			displayScreen(new cjg());
 		}
-		cgn chatField = getChatField();
+		cgy chatField = getChatField();
 		chatField.a(chatField.b() + text);
 	}
 
-	private cgn getChatField() {
-		civ chatGUI = (civ) getMinecraftScreen();
-		cgn chatField;
+	private cgy getChatField() {
+		cjg chatGUI = (cjg) getMinecraftScreen();
+		cgy chatField;
 		if (Transformer.FORGE) {
 			try {
-				chatField = (cgn) forgeChatField.get(chatGUI);
+				chatField = (cgy) forgeChatField.get(chatGUI);
 			} catch (Exception e) {
 				throw new RuntimeException(e);
 			}
@@ -375,10 +375,10 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 
 	@Override
 	public void registerKeybindings(List<IKeybinding> keybindings) {
-		cfe[] currentKeybindings = getGameSettings().aw;
-		cfe[] customKeybindings = new cfe[keybindings.size()];
+		cfp[] currentKeybindings = getGameSettings().aw;
+		cfp[] customKeybindings = new cfp[keybindings.size()];
 		for (int i = 0; i < keybindings.size(); i++) {
-			customKeybindings[i] = (cfe) keybindings.get(i);
+			customKeybindings[i] = (cfp) keybindings.get(i);
 		}
 		getGameSettings().aw = Utils.concat(currentKeybindings, customKeybindings);
 
@@ -392,6 +392,7 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 
 	@Override
 	public void playSound(String domain, String sound, float pitch) {
+		//dfi need to bw changed can't find the right one
 		getMinecraft().N().a(dfi.a(new wh(new ResourceLocation(domain, sound)), pitch));
 	}
 
@@ -400,18 +401,18 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 		return getFontrenderer().a;
 	}
 
-	public cqy getServerData() {
+	public crj getServerData() {
 		return getMinecraft().v();
 	}
 
 	@Override
 	public void resetServer() {
-		getMinecraft().a((cqy) null);
+		getMinecraft().a((crj) null);
 	}
 
 	@Override
 	public String getServer() {
-		cqy serverData = getServerData();
+		crj serverData = getServerData();
 		if (serverData == null)
 			return null;
 		return serverData.b;
@@ -420,7 +421,7 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 	@Override
 	public List<NetworkPlayerInfo> getServerPlayers() {
 		List<NetworkPlayerInfo> result = Lists.newArrayList();
-		for (cqw wrapped : getPlayer().d.e()) {
+		for (crh wrapped : getPlayer().d.e()) {
 			result.add(new WrappedNetworkPlayerInfo(wrapped));
 		}
 		return result;
@@ -453,20 +454,20 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 
 	@Override
 	public String translate(String location, Object... values) {
-		return ddz.a(location, values);
+		return dej.a(location, values);
 	}
 
 	@Override
 	public void displayScreen(Gui gui) {
 		if (gui == null)
-			displayScreen((cjs) null);
+			displayScreen((ckd) null);
 		else
 			displayScreen(gui.getHandle());
 	}
 
 	@Override
 	public void displayScreen(Object gui) {
-		getMinecraft().a((cjs) gui);
+		getMinecraft().a((ckd) gui);
 	}
 
 	@Override
@@ -476,7 +477,7 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 		}
 
 		MinecraftFactory.getClassProxyCallback().resetServer();
-		displayScreen(new ciz((cjs) getMinecraftScreen(), getMinecraft(), new cqy(host, host + ":" + port, false)));
+		displayScreen(new cjk((ckd) getMinecraftScreen(), getMinecraft(), new crj(host, host + ":" + port, false)));
 	}
 
 	@Override
@@ -489,7 +490,7 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 		}
 
 		MinecraftFactory.getClassProxyCallback().resetServer();
-		displayScreen(new ciz((cjs) parentScreen, getMinecraft(), (cqy) serverData));
+		displayScreen(new cjk((ckd) parentScreen, getMinecraft(), (crj) serverData));
 	}
 
 	@Override
@@ -499,14 +500,14 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 		if (getWorld() != null) {
 			getWorld().S();
 		}
-		getMinecraft().a((cqv) null);
+		getMinecraft().a((crg) null);
 		if (isOnIntegratedServer) {
-			displayScreen(new cjx());
+			displayScreen(new cki());
 		} else if (isConnectedToRealms) {
 			RealmsBridge realmsBridge = new RealmsBridge();
-			realmsBridge.switchToRealms(new cjx());
+			realmsBridge.switchToRealms(new cki());
 		} else {
-			displayScreen(new clm(new cjx()));
+			displayScreen(new clx(new cki()));
 		}
 	}
 
@@ -524,29 +525,29 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 		return cft.s();
 	}
 
-	public cfz getFontrenderer() {
+	public cgk getFontrenderer() {
 		return getMinecraft().l;
 	}
 
-	public cfl getGameSettings() {
+	public cfw getGameSettings() {
 		return getMinecraft().t;
 	}
 
-	public csy getPlayer() {
+	public ctj getPlayer() {
 		return getMinecraft().i;
 	}
 
-	public cqv getWorld() {
+	public crg getWorld() {
 		return getMinecraft().g;
 	}
 
-	public cga getGuiIngame() {
+	public cgl getGuiIngame() {
 		return getMinecraft().q;
 	}
 
 	@Override
 	public boolean isSpectatingSelf() {
-		return getSpectatingEntity() instanceof aoc;
+		return getSpectatingEntity() instanceof aok;
 	}
 
 	@Override
@@ -554,19 +555,19 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 		return PlayerGameMode.values()[getMinecraft().e.k().a()];
 	}
 
-	public aeo getSpectatingEntity() {
+	public aer getSpectatingEntity() {
 		return getMinecraft().S();
 	}
 
-	public apr getOpenContainer() {
+	public apv getOpenContainer() {
 		return getPlayer().bE;
 	}
 
 	@Override
 	public String getOpenContainerTitle() {
-		if (!(getOpenContainer() instanceof apv))
+		if (!(getOpenContainer() instanceof apz))
 			return null;
-		return ((apv) getOpenContainer()).d().N_().d();
+		return ((apz) getOpenContainer()).d().N_().d();
 	}
 
 	@Override
@@ -606,7 +607,7 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 
 	@Override
 	public boolean isTerrainLoading() {
-		return getMinecraftScreen() instanceof cbm;
+		return getMinecraftScreen() instanceof cbw;
 	}
 
 	@Override
@@ -636,37 +637,37 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 
 	@Override
 	public int getPlayerChunkX() {
-		ej blockPosition = new ej(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
+		el blockPosition = new el(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
 		return blockPosition.o() >> 4;
 	}
 
 	@Override
 	public int getPlayerChunkY() {
-		ej blockPosition = new ej(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
+		el blockPosition = new el(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
 		return blockPosition.p() >> 4;
 	}
 
 	@Override
 	public int getPlayerChunkZ() {
-		ej blockPosition = new ej(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
+		el blockPosition = new el(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
 		return blockPosition.q() >> 4;
 	}
 
 	@Override
 	public int getPlayerChunkRelX() {
-		ej blockPosition = new ej(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
+		el blockPosition = new el(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
 		return blockPosition.o() & 15;
 	}
 
 	@Override
 	public int getPlayerChunkRelY() {
-		ej blockPosition = new ej(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
+		el blockPosition = new el(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
 		return blockPosition.p() & 15;
 	}
 
 	@Override
 	public int getPlayerChunkRelZ() {
-		ej blockPosition = new ej(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
+		el blockPosition = new el(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
 		return blockPosition.q() & 15;
 	}
 
@@ -692,36 +693,36 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 
 	@Override
 	public ResourceLocation getTargetBlockName() {
-		ej blockPosition = getMinecraft().s.a();
+		el blockPosition = getMinecraft().s.a();
 		//getWorld().a_(getSpectatingEntity().a(20.0D, 0.0F, cdr.c).a()).c();
-		return ResourceLocation.fromObfuscated(bfx.e.b(getWorld().a_(blockPosition).c()));
+		return ResourceLocation.fromObfuscated(bgg.e.b(getWorld().a_(blockPosition).c()));
 	}
 
 	@Override
 	public boolean isFancyGraphicsEnabled() {
-		return cfi.p();
+		return cft.p();
 	}
 
 	@Override
 	public String getBiome() {
-		ej localdt = new ej(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
+		el localdt = new el(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
 		if (!getWorld().D(localdt) || localdt.p() < 0 || localdt.p() >= 256) {
 			return null;
 		}
-		bna localObject = getMinecraft().g.l(localdt);
+		bnj localObject = getMinecraft().g.l(localdt);
 		if (localObject.s()) {
 			return null;
 		}
-		return String.valueOf(ayn.aK.b(localObject.i(localdt)));
+		return String.valueOf(ayu.aK.b(localObject.i(localdt)));
 	}
 
 	@Override
 	public int getLightLevel() {
-		ej localdt = new ej(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
+		el localdt = new el(getPlayerPosX(), getPlayerPosY(), getPlayerPosZ());
 		if (!getWorld().D(localdt) || localdt.p() < 0 || localdt.p() >= 256) {
 			return 0;
 		}
-		bna localObject = getMinecraft().g.l(localdt);
+		bnj localObject = getMinecraft().g.l(localdt);
 		if (localObject.s()) {
 			return 0;
 		}
@@ -740,19 +741,19 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 
 	@Override
 	public int getFoodLevel() {
-		return isSpectatingSelf() ? ((aoc) getSpectatingEntity()).dw().a() : getPlayer().dw().a();
+		return isSpectatingSelf() ? ((aog) getSpectatingEntity()).dw().a() : getPlayer().dw().a();
 	}
 
 	@Override
 	public float getSaturation() {
-		return isSpectatingSelf() ? ((aoc) getSpectatingEntity()).dw().e() : 0;
+		return isSpectatingSelf() ? ((aog) getSpectatingEntity()).dw().e() : 0;
 	}
 
 	@Override
 	public float getHealth(Object entity) {
-		if (!(entity instanceof aev))
+		if (!(entity instanceof aey))
 			return -1;
-		return ((aev) entity).cq();
+		return ((aey) entity).cq();
 	}
 
 	@Override

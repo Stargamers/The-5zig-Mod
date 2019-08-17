@@ -44,7 +44,7 @@ public class Slider extends Button {
 	 * Mouse dragged
 	 */
 	@Override
-	protected void a(cfi mc, int mouseX, int mouseY) {
+	protected void a(cft mc, int mouseX, int mouseY) {
 		if (isVisible()) {
 			if (this.dragging) {
 				this.value = (mouseX - (getX() + 4)) / (float) (getWidth() - 8);

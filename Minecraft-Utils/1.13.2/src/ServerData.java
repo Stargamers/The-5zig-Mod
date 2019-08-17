@@ -1,6 +1,6 @@
 import eu.the5zig.mod.util.IServerData;
 
-public class ServerData extends cqy implements IServerData {
+public class ServerData extends crj implements IServerData {
 
 	public ServerData(String serverIP) {
 		super(serverIP, serverIP, false);

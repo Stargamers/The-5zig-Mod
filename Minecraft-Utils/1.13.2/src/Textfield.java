@@ -8,7 +8,7 @@ import eu.the5zig.mod.gui.elements.ITextfield;
  * Textfield class is a Simple Wrapper for default Minecraft Textfields.
  * Since I use obfuscated code, this textfield class simply refactors all required methods of the original Textfield.
  */
-public class Textfield extends cgn implements ITextfield {
+public class Textfield extends cgy implements ITextfield {
 
 	/**
 	 * ID, Width and height need to be declared in this class, since there is no direct access to it in original Textfield class.

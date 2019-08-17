@@ -20,12 +20,12 @@ public class StringButton extends Button {
 			return;
 		}
 
-		cfi var4 = cfi.s();
-		ctp.c(1.0F, 1.0F, 1.0F, 1.0F);
+		cft var4 = cft.s();
+		cua.c(1.0F, 1.0F, 1.0F, 1.0F);
 		this.n = var1 >= this.h && var2 >= this.i && var1 < this.h + this.f && var2 < this.i + this.g;
-		ctp.m();
-		ctp.a(ctp.r.l, ctp.l.j, ctp.r.e, ctp.l.n);
-		ctp.a(ctp.r.l, ctp.l.j);
+		cua.m();
+		cua.a(cua.r.l, cua.l.j, cua.r.e, cua.l.n);
+		cua.a(cua.r.l, cua.l.j);
 		this.a(var4, var1, var2);
 		int var7 = 14737632;
 		if (!this.l) {

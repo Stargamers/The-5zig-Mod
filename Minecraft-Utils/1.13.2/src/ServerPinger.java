@@ -6,7 +6,7 @@ import java.net.UnknownHostException;
 
 public class ServerPinger implements IServerPinger {
 
-	private cra handle = new cra();
+	private crl handle = new crl();
 
 	@Override
 	public IServerData createServerData(String serverIP) {
