@@ -520,8 +520,8 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 		return (long) (GLFW.glfwGetTime() * 1000.0);
 	}
 
-	public cfi getMinecraft() {
-		return cfi.s();
+	public cft getMinecraft() {
+		return cft.s();
 	}
 
 	public cfz getFontrenderer() {
@@ -964,7 +964,7 @@ public class Variables implements IVariables, GLFWKeyCallbackI {
 		}
 	}
 
-	public void renderItem(ata itemStack, int x, int y) {
+	public void renderItem(ate itemStack, int x, int y) {
 		cfg.c();
 		GLUtil.enableBlend();
 		GLUtil.tryBlendFuncSeparate(770, 771, 1, 0);

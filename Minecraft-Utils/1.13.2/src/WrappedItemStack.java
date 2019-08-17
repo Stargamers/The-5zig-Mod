@@ -17,9 +17,9 @@ public class WrappedItemStack implements ItemStack {
 
 	private static final UUID ITEM_MODIFIER_UUID = UUID.fromString("cb3f55d3-645c-4f38-a497-9c13a33db5cf");
 
-	private ata item;
+	private ate item;
 
-	public WrappedItemStack(ata item) {
+	public WrappedItemStack(ate item) {
 		this.item = item;
 	}
 
@@ -51,7 +51,7 @@ public class WrappedItemStack implements ItemStack {
 	@Override
 	public List<String> getLore() {
 		List<String> result = Lists.newArrayList();
-		for (ij chatComponent : item.a(((Variables) MinecraftFactory.getVars()).getPlayer(), aui.a.a)) {
+		for (ij chatComponent : item.a(((Variables) MinecraftFactory.getVars()).getPlayer(), aum.a.a)) {
 			result.add(chatComponent.getString());
 		}
 		return result;
@@ -59,12 +59,12 @@ public class WrappedItemStack implements ItemStack {
 
 	@Override
 	public int getHealAmount() {
-		return item.b() instanceof asr ? ((asr) item.b()).e(item) : 0;
+		return item.b() instanceof asz ? ((asr) item.b()).c(item) : 0;
 	}
 
 	@Override
 	public float getSaturationModifier() {
-		return item.b() instanceof asr ? ((asr) item.b()).e(item) : 0;
+		return item.b() instanceof asr ? ((asr) item.b()).c(item) : 0;
 	}
 
 	@Override
@@ -74,18 +74,19 @@ public class WrappedItemStack implements ItemStack {
 		((Variables) MinecraftFactory.getVars()).renderItem(item, x, y);
 
 		if (withGenericAttributes) {
-			for (aet modifier : aet.values()) {
-				Multimap<String, afl> multimap = item.a(modifier);
-				for (Map.Entry<String, afl> entry : multimap.entries()) {
-					afl attribute = entry.getValue();
+			for (aew modifier : aew.values()) {
+				Multimap<String, afo> multimap = item.a(modifier);
+				for (Map.Entry<String, afo> entry : multimap.entries()) {
+					afo attribute = entry.getValue();
 					double value = attribute.d();
 					if (ITEM_MODIFIER_UUID.equals(attribute.a())) {
 						if (((Variables) MinecraftFactory.getVars()).getPlayer() == null) {
 							value += 1;
-							value += (double) awc.a(item, afa.a);
+							value += (double) awg.a(item, afd.a);
 						} else {
-							value += ((Variables) MinecraftFactory.getVars()).getPlayer().a(ang.f).b();
-							value += (double) awc.a(item, afa.a);
+							//find the right method for ank.*
+							value += ((Variables) MinecraftFactory.getVars()).getPlayer().a(ank.f).b();
+							value += (double) awg.a(item, afd.a);
 						}
 					}
 					if (entry.getKey().equals("generic.attackDamage") || entry.getKey().equals("generic.armor")) {
@@ -102,8 +103,8 @@ public class WrappedItemStack implements ItemStack {
 		}
 	}
 
-	public static String getResourceKey(ata item) {
-		pc resourceLocation = asw.f.b(item.b());
+	public static String getResourceKey(ate item) {
+		pc resourceLocation = ata.f(item.b());
 		return resourceLocation == null ? null : resourceLocation.toString();
 	}
 }

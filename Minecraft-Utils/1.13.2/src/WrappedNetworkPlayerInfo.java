@@ -4,9 +4,9 @@ import eu.the5zig.util.minecraft.ChatColor;
 
 public class WrappedNetworkPlayerInfo implements NetworkPlayerInfo {
 
-	private cqw wrapped;
+	private crh wrapped;
 
-	public WrappedNetworkPlayerInfo(cqw wrapped) {
+	public WrappedNetworkPlayerInfo(crh wrapped) {
 		this.wrapped = wrapped;
 	}
 

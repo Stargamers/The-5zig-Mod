@@ -2,9 +2,9 @@ import eu.the5zig.mod.gui.elements.IWrappedTextfield;
 
 public class WrappedTextfield implements IWrappedTextfield {
 
-	private cgn handle;
+	private cgy handle;
 
-	public WrappedTextfield(cgn handle) {
+	public WrappedTextfield(cgy handle) {
 		this.handle = handle;
 	}
 

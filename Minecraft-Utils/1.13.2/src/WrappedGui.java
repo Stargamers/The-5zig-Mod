@@ -4,9 +4,9 @@ import eu.the5zig.mod.gui.elements.IButton;
 
 public class WrappedGui extends IWrappedGui {
 
-	private cjs child;
+	private ckd child;
 
-	public WrappedGui(cjs gui) {
+	public WrappedGui(ckd gui) {
 		this.child = gui;
 	}
 
